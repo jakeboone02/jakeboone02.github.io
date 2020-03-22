@@ -1,7 +1,5 @@
 # Jake Allen Boone
 
-## Profile
-
 I am a highly motivated, hard-working web developer with technical as well as managerial and leadership experience.  I have worked successfully with diverse, international teams in many different environments.  I enjoy designing and creating tools, teaching others, and acting as the bridge between functional and technical parties.
 
 ## Education
@@ -12,10 +10,11 @@ I am a highly motivated, hard-working web developer with technical as well as ma
 ## Technical skills
 
 - HTML5
-- CSS3
+- CSS3 / SCSS
 - JavaScript (ES6)
   - TypeScript
   - ReactJS / Redux
+  - Jest / Cypress
   - NodeJS
 - Oracle SQL and PL/SQL
 
