@@ -25,7 +25,7 @@ I am a highly motivated, hard-working web developer with technical as well as ma
 
 ## Employment experience
 
-### Materials Management Product Owner | Bechtel Corporation
+### Materials Management Product Owner / Web Developer | Bechtel Corporation
 #### Glendale, Arizona | January 2016 - present
 - Designed and developed two mission-critical web applications for expediting and materials management
 - Integrated modern web design techniques (React/Redux, Jest unit testing, REST APIs, etc.) into a legacy Oracle EBS platform
