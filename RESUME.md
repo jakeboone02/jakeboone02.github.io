@@ -21,6 +21,10 @@ I am a highly motivated, hard-working product owner and web developer with techn
 - https://github.com/jakeboone02
 - https://www.npmjs.com/~jakeboone02
 
+## Qualifications
+
+- Certified Scrum Product Owner
+
 ## Employment experience
 
 ### Materials Management Product Owner / Web Developer | Bechtel Corporation
@@ -28,14 +32,19 @@ I am a highly motivated, hard-working product owner and web developer with techn
 #### Glendale, Arizona | January 2016 - present
 
 - Designed and developed two mission-critical web applications for expediting and materials management
-- Integrated modern web design techniques (React/Redux, Jest unit testing, REST APIs, etc.) into a legacy Oracle EBS platform
-- Coordinated the activities of UX designers, front-end and back-end developers to produce a high quality product that exceeded requirements
+- Integrated modern web design techniques (React, Redux, Jest and Cypress testing, REST APIs, etc.) into a legacy Oracle EBS platform
+- Used Jira task management system and Agile software development methodologies to coordinate the activities of UX designers, front-end and back-end developers
+- Prepared product technical and functional documentation in MediaWiki-based system
+- Developed MediaWiki templates and Lua modules to help organize content for the enterprise
+- Automated the application deployment process with bash scripts and Microsoft Team Foundation Server (TFS) builds
 
 ### Procurement Automation Product Owner | Bechtel Corporation
 
 #### Reston, Virginia | June 2014 - December 2015
 
 - Acted as Product Owner of the company's procurement automation system
+- Wrote user stories and functional requirements documents for maintenance and enhancement activities
+- Managed the release/patch cycle
 
 ### Procurement Automation Manager | Bechtel Oil, Gas and Chemicals
 
