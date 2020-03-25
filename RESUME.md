@@ -1,5 +1,3 @@
-# Jake Allen Boone
-
 I am a highly motivated, hard-working product owner and web developer with technical as well as managerial and leadership experience. I have worked successfully with diverse, international teams in many different environments. I enjoy designing and creating tools, teaching others, and acting as the bridge between functional and technical parties.
 
 ## Education
