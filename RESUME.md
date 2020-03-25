@@ -35,7 +35,7 @@ I am a highly motivated, hard-working product owner and web developer with techn
 - Designed and developed two mission-critical web applications for expediting and materials management
 - Integrated modern web design techniques (React, Redux, Jest and Cypress testing, REST APIs, etc.) into a legacy Oracle EBS platform
 - Used Jira task management system and Agile software development methodologies to coordinate the activities of UX designers, front-end and back-end developers
-- Prepared product technical and functional documentation in MediaWiki-based system
+- Prepared product technical and functional documentation in MediaWiki-based content management system
 - Developed MediaWiki templates and Lua modules to help organize content for the enterprise
 - Automated the application deployment process with bash scripts and Microsoft Team Foundation Server (TFS) builds
 
@@ -45,6 +45,7 @@ I am a highly motivated, hard-working product owner and web developer with techn
 
 - Acted as Product Owner of the company's procurement automation system
 - Wrote user stories and functional requirements documents for maintenance and enhancement activities
+- Prioritized backlog and developed product roadmap based on input from stakeholders and subject matter experts
 - Managed the release/patch cycle
 
 ### Procurement Automation Manager | Bechtel Oil, Gas and Chemicals
