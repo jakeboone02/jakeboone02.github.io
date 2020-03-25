@@ -24,6 +24,7 @@ I am a highly motivated, hard-working product owner and web developer with techn
 ## Qualifications
 
 - Certified Scrum Product Owner
+- Six Sigma Qualtec Certified Yellow Belt
 
 ## Employment experience
 
