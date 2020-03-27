@@ -17,6 +17,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "bootstrap": "^4.4.1",
+    "date-fns": "^2.11.1",
     "jquery": "^3.4.1",
     "jquery.easing": "^1.4.1",
     "node-sass": "^4.13.1",

@@ -16,7 +16,12 @@ const Intro: React.FC = () => (
             <span className="text-slider-items"></span>
             <strong className="text-slider">
               <Typed
-                strings={['Web Developer', 'Product Owner']}
+                strings={[
+                  'Web Developer',
+                  'Product Owner',
+                  'Guitar Player',
+                  'Woodworker',
+                ]}
                 typeSpeed={80}
                 backDelay={1100}
                 backSpeed={30}

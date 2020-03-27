@@ -10,7 +10,6 @@ const App: React.FC = () => {
       <NavBar />
       <Intro />
       <About />
-      <div style={{ height: 500 }} />
     </div>
   );
 };
