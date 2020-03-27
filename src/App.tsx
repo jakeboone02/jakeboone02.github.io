@@ -1,12 +1,18 @@
 import React from 'react';
-import './App.css';
-import Resume from './Resume';
+import About from './About';
+import './App.scss';
+import Intro from './Intro';
+import NavBar from './NavBar';
 
-const App: React.FC = () => (
-  <div className="App">
-    <h1>Jake Allen Boone</h1>
-    <Resume />
-  </div>
-);
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <NavBar />
+      <Intro />
+      <About />
+      <div style={{ height: 500 }} />
+    </div>
+  );
+};
 
 export default App;

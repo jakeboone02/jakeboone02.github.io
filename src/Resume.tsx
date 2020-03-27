@@ -1,7 +1,7 @@
 import raw from 'raw.macro';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import './Resume.css';
+import './Resume.scss';
 
 const resume = raw('../RESUME.md');
 
