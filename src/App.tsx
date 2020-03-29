@@ -6,16 +6,14 @@ import Footer from './Footer';
 import Intro from './Intro';
 import NavBar from './NavBar';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <NavBar />
-      <Intro />
-      <About />
-      <Footer />
-      <BackToTop />
-    </div>
-  );
-};
+const App: React.FC = () => (
+  <div className="App">
+    <NavBar />
+    <Intro />
+    <About />
+    <Footer />
+    <BackToTop />
+  </div>
+);
 
 export default App;
