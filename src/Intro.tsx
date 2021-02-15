@@ -1,12 +1,11 @@
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import { Container } from 'react-bootstrap';
 import Typed from 'react-typed';
 import './Intro.scss';
 import { smoothScroll } from './utils';
 
-const Intro: React.FC = () => (
+const Intro = () => (
   <div id="home" className="intro bg-image background">
     <div className="intro-content display-table">
       <div className="table-cell">

@@ -1,5 +1,5 @@
 import { format, parseISO } from 'date-fns';
-import React from 'react';
+import { Fragment } from 'react';
 import { Badge, Col, Container, Row } from 'react-bootstrap';
 import AboutIntro from './AboutIntro';
 import AboutTitleBox from './AboutTitleBox';
@@ -129,7 +129,7 @@ const about = {
   ],
 };
 
-const About: React.FC = () => (
+const About = () => (
   <Container className="section-wrapper">
     <Row id="about">
       <Col className="shadow-sm p-5 bg-light">
@@ -159,7 +159,7 @@ const About: React.FC = () => (
           <Col md={6}>
             <AboutTitleBox headline="Work Experience" />
             {about.workHistory.map(w => (
-              <React.Fragment key={w.startDate}>
+              <Fragment key={w.startDate}>
                 <Badge variant="dark" className="badge float-right bg-medium">
                   {`${format(parseISO(w.startDate), 'MMM yyyy')}-${
                     w.endDate
@@ -179,7 +179,7 @@ const About: React.FC = () => (
                     ))}
                   </ul>
                 </p>
-              </React.Fragment>
+              </Fragment>
             ))}
           </Col>
         </Row>

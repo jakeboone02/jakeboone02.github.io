@@ -1,6 +1,4 @@
-import React from 'react';
-
-const AboutIntro: React.FC = () => (
+const AboutIntro = () => (
   <div className="pb-2 mb-5 pt-md-0">
     <p className="lead font-weight-normal">
       I design, develop, and manage web applications

@@ -1,4 +1,3 @@
-import React from 'react';
 import './AboutTitleBox.scss';
 
 export interface AboutTitleBoxProps {
@@ -6,10 +5,10 @@ export interface AboutTitleBoxProps {
   subhead?: string;
 }
 
-const AboutTitleBox: React.FC<AboutTitleBoxProps> = props => (
+const AboutTitleBox = ({ headline, subhead}: AboutTitleBoxProps) => (
   <div className={'title-box-2'}>
-    <h3 className={'title-left'}>{props.headline}</h3>
-    <p className="subtitle-a">{props.subhead}</p>
+    <h3 className={'title-left'}>{headline}</h3>
+    <p className="subtitle-a">{subhead}</p>
     <div className="line-mf"></div>
   </div>
 );

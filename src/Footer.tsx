@@ -4,11 +4,10 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Footer.scss';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <Container
       className="paralax-mf footer-paralax bg-image section-wrapper"

@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import $ from 'jquery';
 import './BackToTop.scss';
 
-const BackToTop: React.FC = () => {
+const BackToTop = () => {
   useEffect(() => {
     $('.back-to-top').click(function() {
       const VX_DURATION_MS = 1500;

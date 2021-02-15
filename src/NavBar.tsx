@@ -1,12 +1,12 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import $ from 'jquery';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Nav, Navbar, NavbarProps } from 'react-bootstrap';
 import { smoothScroll } from './utils';
 import './NavBar.scss';
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   const [variant, setVariant] = useState<NavbarProps['variant']>('dark');
 
   useEffect(() => {
