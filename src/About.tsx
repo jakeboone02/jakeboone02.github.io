@@ -12,7 +12,7 @@ const about = {
     },
     {
       groupName: 'Frameworks / Libraries',
-      list: 'React, Redux, Jest, Cypress, ag-Grid, Webpack',
+      list: 'React, Redux, Jest, Cypress, AG Grid, Webpack',
     },
     { groupName: 'Utilities', list: 'Git, npm, yarn, Toad, Jira, TFS' },
   ],
