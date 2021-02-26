@@ -5,7 +5,7 @@ export interface AboutTitleBoxProps {
   subhead?: string;
 }
 
-const AboutTitleBox = ({ headline, subhead}: AboutTitleBoxProps) => (
+const AboutTitleBox = ({ headline, subhead }: AboutTitleBoxProps) => (
   <div className={'title-box-2'}>
     <h3 className={'title-left'}>{headline}</h3>
     <p className="subtitle-a">{subhead}</p>

@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import $ from 'jquery';
 import { useEffect, useState } from 'react';
 import { Nav, Navbar, NavbarProps } from 'react-bootstrap';
-import { smoothScroll } from './utils';
 import './NavBar.scss';
+import { smoothScroll } from './utils';
 
 const NavBar = () => {
   const [variant, setVariant] = useState<NavbarProps['variant']>('dark');
@@ -29,7 +29,7 @@ const NavBar = () => {
       target: '.navbar.fixed-top',
       offset: navbar.offsetHeight + 50,
     });
-  });
+  }, []);
 
   return (
     <Navbar

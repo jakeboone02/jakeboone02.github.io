@@ -28,17 +28,18 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^17.0.1",
     "react-markdown": "^5.0.3",
-    "react-scripts": "4.0.2",
+    "react-scripts": "4.0.3",
     "react-typed": "^1.2.0",
-    "typescript": "~4.1.5"
+    "typescript": "~4.2.2"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "start": "PORT=3012 BROWSER=none react-scripts start",
+    "start": "PORT=4012 BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pretty-print": "npx prettier --write ./src/**/*.{scss,ts,tsx}"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -56,6 +57,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "prettier": "^2.2.1"
   }
 }

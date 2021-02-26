@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import $ from 'jquery';
+import { useEffect } from 'react';
 import './BackToTop.scss';
 
 const BackToTop = () => {
   useEffect(() => {
-    $('.back-to-top').click(function() {
+    $('.back-to-top').on('click', () => {
       const VX_DURATION_MS = 1500;
       $('html, body').animate(
         { scrollTop: 0 },
@@ -31,7 +31,7 @@ const BackToTop = () => {
         }
       }
     });
-  });
+  }, []);
 
   return (
     <a href="/#" className="back-to-top animated">

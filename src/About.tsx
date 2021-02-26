@@ -8,7 +8,7 @@ const about = {
   codeAndTools: [
     {
       groupName: 'Languages',
-      list: 'HTML, CSS, JavaScript, TypeScript, SCSS, Oracle PL/SQL',
+      list: 'HTML, CSS, JavaScript, TypeScript, SCSS, SQL, Oracle PL/SQL',
     },
     {
       groupName: 'Frameworks / Libraries',
