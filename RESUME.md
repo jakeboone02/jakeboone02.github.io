@@ -9,7 +9,7 @@ I am a highly motivated, hard-working product owner and web developer with techn
 
 - HTML5
 - CSS3 / SCSS
-- JavaScript (ES6)
+- JavaScript
   - TypeScript
   - ReactJS / Redux
   - Jest / Cypress
@@ -28,9 +28,15 @@ I am a highly motivated, hard-working product owner and web developer with techn
 
 ## Employment experience
 
+### Supply Chain Automation Lead | Bechtel Infrastructure
+
+#### January 2022 - present
+
+- Managed a Supply Chain Automation support team for Bechtel's Infrastructure global business unit
+
 ### Materials Management Product Owner / Web Developer | Bechtel Corporation
 
-#### Glendale, Arizona | January 2016 - present
+#### Glendale, Arizona | January 2016 - December 2021
 
 - Designed and developed two mission-critical web applications for expediting and materials management
 - Integrated modern web design techniques (React, Redux, Jest and Cypress testing, REST APIs, etc.) into a legacy Oracle EBS platform

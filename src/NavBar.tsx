@@ -1,6 +1,5 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import $ from 'jquery';
 import { useEffect, useState } from 'react';
 import { Nav, Navbar, NavbarProps } from 'react-bootstrap';
 import './NavBar.scss';
@@ -10,25 +9,28 @@ const NavBar = () => {
   const [variant, setVariant] = useState<NavbarProps['variant']>('dark');
 
   useEffect(() => {
-    const navbar = document.querySelector('.navbar') as HTMLElement;
-    const body: any = $('body');
+    setTimeout(() => {
+      const navbar = document.querySelector('.navbar') as HTMLElement;
 
-    if (!navbar) return;
+      const $body: any = $(globalThis.document.body);
 
-    // Change nav style for load and top
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > navbar.offsetHeight) {
-        setVariant('light');
-      } else {
-        setVariant('dark');
-      }
-    });
+      if (!navbar) return;
 
-    // Auto-advance menu
-    body.scrollspy({
-      target: '.navbar.fixed-top',
-      offset: navbar.offsetHeight + 50,
-    });
+      // Change nav style for load and top
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > navbar.offsetHeight) {
+          setVariant('light');
+        } else {
+          setVariant('dark');
+        }
+      });
+
+      // Auto-advance menu
+      $body.scrollspy({
+        target: '.navbar.fixed-top',
+        offset: navbar.offsetHeight + 50,
+      });
+    }, 1000);
   }, []);
 
   return (

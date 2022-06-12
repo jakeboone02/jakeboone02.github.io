@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export const smoothScroll = (event: any, hash: string) => {
   // event.preventDefault()
 

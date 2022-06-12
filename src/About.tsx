@@ -20,8 +20,18 @@ const about = {
     {
       company: 'Bechtel',
       location: 'Glendale, Arizona',
+      position: 'Supply Chain Automation Manager',
+      startDate: '2022-01-01',
+      summary:
+        "Managed a Supply Chain Automation support team for Bechtel's Infrastructure global business unit",
+      highlights: [],
+    },
+    {
+      company: 'Bechtel',
+      location: 'Glendale, Arizona',
       position: 'Product Owner / Web Developer',
       startDate: '2016-01-01',
+      endDate: '2021-12-31',
       summary:
         'Designed and developed two mission-critical web applications for expediting and materials management',
       highlights: [
@@ -138,7 +148,7 @@ const About = () => (
             <AboutIntro />
             <AboutTitleBox headline="Code &amp; Tools" />
             {about.codeAndTools.map(c => (
-              <p>
+              <p key={c.groupName}>
                 <span className="font-weight-bold">{c.groupName}</span>
                 <br />
                 {c.list}
@@ -160,7 +170,7 @@ const About = () => (
             <AboutTitleBox headline="Work Experience" />
             {about.workHistory.map(w => (
               <Fragment key={w.startDate}>
-                <Badge variant="dark" className="badge float-right bg-medium">
+                <Badge className="badge float-right bg-medium">
                   {`${format(parseISO(w.startDate), 'MMM yyyy')}-${
                     w.endDate
                       ? format(parseISO(w.endDate), 'MMM yyyy')
@@ -171,14 +181,14 @@ const About = () => (
                 <span className="font-weight-normal">
                   {w.company} - {w.location}
                 </span>
-                <p className="font-weight-light">
+                <div className="font-weight-light">
                   {w.summary}
                   <ul>
                     {w.highlights.map(h => (
                       <li key={h}>{h}</li>
                     ))}
                   </ul>
-                </p>
+                </div>
               </Fragment>
             ))}
           </Col>
