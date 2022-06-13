@@ -5,6 +5,11 @@
     <meta name="description" content="Résumé / CV for Web Developer and Product Owner Jake Boone '02" />
     <title>Jake Boone '02 - Résumé / CV</title>
     <style type="text/css">
+      :root {
+        --sm-gap: 0.5rem;
+        --md-gap: 1rem;
+        --lg-gap: 2rem;
+      }
       html,
       body {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
@@ -13,10 +18,7 @@
       body {
         background-color: #ddd;
         color: #333;
-        padding: 1rem;
-      }
-      p {
-        margin-top: 0;
+        padding: var(--md-gap);
       }
       a,
       a:visited {
@@ -26,41 +28,42 @@
       a:hover {
         text-decoration: underline;
       }
+      h1,
       h2,
       h3,
       h4,
-      h5 {
-        margin: 1.2rem auto;
-      }
-      h1:first-child {
+      h5,
+      h6,
+      p {
         margin: 0;
       }
       h4,
       h5 {
         display: flex;
         justify-content: space-between;
-        column-gap: 0.5rem;
+        column-gap: var(--sm-gap);
       }
-      h4 {
-        margin-bottom: 0.5rem;
-      }
-      h5 {
-        margin-top: 0.5rem;
+      header,
+      section {
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--md-gap);
       }
       ul {
-        padding-inline-start: 2rem;
+        padding-inline-start: var(--lg-gap);
+        margin: 0;
       }
       ul > li > ul {
-        padding-inline-start: 1.5rem;
+        padding-inline-start: calc(var(--md-gap) + var(--sm-gap));
       }
-      ul.inline-list {
+      .inline-list {
         display: inline-block;
         padding: 0;
       }
-      ul.inline-list > li {
+      .inline-list > li {
         display: inline;
       }
-      ul.inline-list > li + li::before {
+      .inline-list > li + li::before {
         content: ' | ';
       }
       .dim {
@@ -69,41 +72,52 @@
       #cv {
         background-color: white;
         border: 1px solid #ddd;
-        border-radius: 1rem;
+        border-radius: var(--md-gap);
         box-shadow: #ccc 6px 6px 12px 8px;
-        padding: 2rem;
-        max-width: 1214px;
-        margin: 0 auto;
-      }
-      #expertise-body {
         display: flex;
         flex-direction: column;
+        margin: 0 auto;
+        max-width: 1214px;
+        padding: var(--lg-gap);
+        row-gap: var(--md-gap);
       }
-      #expertise h4 {
-        margin-top: 0;
+      #teaching-and-certs {
+        display: flex;
+        flex-direction: column;
+        gap: var(--md-gap);
+      }
+      #certs-inner {
+        display: none;
+      }
+      #certs-last {
+        display: initial;
+      }
+      #expertise-sections {
+        display: grid;
+        gap: var(--md-gap);
       }
       @media (min-width: 992px) {
-        #expertise-body {
-          flex-direction: row;
-          justify-content: space-between;
-          column-gap: 0.5rem;
+        #expertise-sections {
+          grid-auto-flow: column;
+          grid-auto-columns: 1fr;
+          gap: var(--sm-gap);
         }
-        #tools {
-          order: 1;
+        #teaching-and-certs {
+          order: 99;
         }
-        #oss {
-          order: 2;
+        #certs-inner {
+          display: initial;
         }
-        #teaching {
-          order: 3;
+        #certs-last {
+          display: none;
         }
       }
-      #certifications > h2 {
-        margin-top: 0;
+      #experience > section {
+        row-gap: var(--sm-gap);
       }
-      #experience > ul {
+      #experience ul {
         border-right: 1px dotted gray;
-        padding-right: 0.5rem;
+        padding-right: var(--sm-gap);
       }
     </style>
   </head>
@@ -143,7 +157,7 @@
       </section>
       <section id="expertise">
         <h2>Expertise</h2>
-        <div id="expertise-body">
+        <div id="expertise-sections">
           <div id="tools">
             <h4>Tools</h4>
             <ul>
@@ -163,16 +177,25 @@
               <li>SQL and Oracle PL/SQL</li>
             </ul>
           </div>
-          <div id="teaching">
-            <h4>Teaching</h4>
-            <ul>
-              <li>
-                <a href="https://www.newline.co/courses/building-advanced-admin-reporting-in-react"
-                  >Building Advanced Admin Reporting in React</a
-                >
-              </li>
-              <li><a href="https://stackoverflow.com/users/765987/jake-boone">Stack Overflow</a></li>
-            </ul>
+          <div id="teaching-and-certs">
+            <div id="teaching">
+              <h4>Teaching</h4>
+              <ul>
+                <li>
+                  <a href="https://www.newline.co/courses/building-advanced-admin-reporting-in-react"
+                    >Building Advanced Admin Reporting in React</a
+                  >
+                </li>
+                <li><a href="https://stackoverflow.com/users/765987/jake-boone">Stack Overflow</a></li>
+              </ul>
+            </div>
+            <div id="certs-inner">
+              <h4>Certifications</h4>
+              <ul>
+                <li>Certified Scrum Product Owner</li>
+                <li>Six Sigma Qualtec Certified Yellow Belt</li>
+              </ul>
+            </div>
           </div>
           <div id="oss">
             <h4>Open-source contributions</h4>
@@ -196,133 +219,151 @@
               </li>
             </ul>
           </div>
+          <div id="certs-last">
+            <h4>Certifications</h4>
+            <ul>
+              <li>Certified Scrum Product Owner</li>
+              <li>Six Sigma Qualtec Certified Yellow Belt</li>
+            </ul>
+          </div>
         </div>
-      </section>
-      <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-          <li>Certified Scrum Product Owner</li>
-          <li>Six Sigma Qualtec Certified Yellow Belt</li>
-        </ul>
       </section>
       <section id="experience">
         <h2>Experience</h2>
-        <h4>
-          <span>Supply Chain Automation Lead</span>
-          <a href="https://www.bechtel.com" class="dim">Bechtel Infrastructure</a>
-        </h4>
-        <h5><span>Peoria, Arizona</span><span class="dim"><time datetime="2022-01">Jan '22</time> - present</span></h5>
-        <ul>
-          <li>Managed a Supply Chain Automation support team for Bechtel's Infrastructure global business unit</li>
-        </ul>
-        <h4>
-          <span>Materials Management Product Owner / Web Developer</span>
-          <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
-        </h4>
-        <h5><span>Glendale, Arizona</span><span class="dim"><time datetime="2016-01">Jan '16</time> - <time datetime="2021-12">Dec '21</time></span></h5>
-        <ul>
-          <li>
-            Designed and developed full stack (React front-end, Oracle PL/SQL back-end) of two mission-critical web
-            applications for expediting and materials management
-          </li>
-          <li>
-            Integrated modern web design techniques (React, Redux, Jest and Cypress testing, REST APIs, etc.) into a
-            legacy Oracle EBS platform
-          </li>
-          <li>
-            Used JIRA task management system and Agile software development methodologies to coordinate the activities of
-            UX designers, front-end and back-end developers
-          </li>
-          <li>Prepared product technical and functional documentation in MediaWiki-based content management system</li>
-          <li>Developed MediaWiki templates and Lua modules to help organize content for the enterprise</li>
-          <li>Automated the application deployment process with bash/PowerShell scripts and Azure Pipelines</li>
-        </ul>
-        <h4>
-          <span>Procurement Automation Product Owner</span>
-          <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
-        </h4>
-        <h5><span>Reston, Virginia</span><span class="dim"><time datetime="2014-06">Jun '14</time> - <time datetime="2015-12">Dec '15</time></span></h5>
-        <ul>
-          <li>Acted as Product Owner of Bechtel's homegrown procurement automation system</li>
-          <li>Helped transition the legacy web application suite from IE-only support to modern, standards-based code</li>
-          <li>Wrote user stories and functional requirements documents for maintenance and enhancement activities</li>
-          <li>
-            Prioritized backlog and developed product roadmap based on input from stakeholders and subject matter experts
-          </li>
-          <li>Managed the release/patch cycle</li>
-        </ul>
-        <h4>
-          <span>Procurement Automation Manager</span>
-          <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
-        </h4>
-        <h5><span>Houston, Texas</span><span class="dim"><time datetime="2012-04">Apr '12</time> - <time datetime="2014-05">May '14</time></span></h5>
-        <ul>
-          <li>Managed a team of 10 procurement automation specialists</li>
-          <li>Mentored and coached employees on career moves, conflict resolution, and problem-solving strategies</li>
-          <li>Supported procurement automation activities on several large capital projects</li>
-        </ul>
-        <h4>
-          <span>Procurement Automation Support Specialist</span>
-          <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
-        </h4>
-        <h5><span>Frederick, Maryland</span><span class="dim"><time datetime="2008-02">Feb '08</time> - <time datetime="2012-04">Apr '12</time></span></h5>
-        <ul>
-          <li>Supported and trained users</li>
-          <li>Developed utility applications to automate tasks</li>
-          <li>Designed new look and feel for large web application suite, including dozens of new icons</li>
-        </ul>
-        <h4>
-          <span>Materials Manager</span>
-          <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
-        </h4>
-        <h5><span>Houston, Texas</span><span class="dim"><time datetime="2007-05">May '07</time> - <time datetime="2008-02">Feb '08</time></span></h5>
-        <ul>
-          <li>Unit Procurement Coordinator for Motiva Port Arthur Refinery Crude Expansion Project</li>
-          <li>Served as liaison between engineering subcontractor and home office procurement</li>
-        </ul>
-        <h4>
-          <span>Procurement Automation Specialist</span><a href="https://www.bechtel.com" class="dim">Bechtel Limited</a>
-        </h4>
-        <h5><span>London, United Kingdom</span><span class="dim"><time datetime="2005-09">Sep '05</time> - <time datetime="2007-05">May '07</time></span></h5>
-        <ul>
-          <li>Lead Procurement System Coordinator for Reliance Jamnagar Export Refinery Project in Jamnagar, India</li>
-          <li>Assisted with setup and management of Oracle database, Citrix farm, and web-based applications</li>
-          <li>
-            Managed, maintained, and assisted with development of interface between Oracle database and client's SAP
-            system
-          </li>
-          <li>
-            Developed and deployed application extensions using Oracle triggers and procedures, MS Access front-ends, and
-            command line interfaces
-          </li>
-          <li>Supervised training and support of over 500 users on three different continents</li>
-        </ul>
-        <h4>
-          <span>Procurement Automation Specialist</span>
-          <a href="https://www.bechtel.com" class="dim">Bechtel Overseas, Inc.</a>
-        </h4>
-        <h5><span>Malabo, Equatorial Guinea</span><span class="dim"><time datetime="2004-08">Aug '04</time> - <time datetime="2005-08">Aug '05</time></span></h5>
-        <ul>
-          <li>Lead Procurement System Coordinator for EG LNG Train 1 Project</li>
-          <li>Trained and supported remote jobsite personnel</li>
-          <li>Contributed Oracle PL/SQL, ASP, and JavaScript code for bug fixes and enhancements</li>
-        </ul>
-        <h4>
-          <span>Procurement Automation Specialist</span>
-          <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
-        </h4>
-        <h5><span>Houston, Texas</span><span class="dim"><time datetime="2003-01">Jan '03</time> - <time datetime="2004-08">Aug '04</time></span></h5>
-        <ul>
-          <li>Acted as primary Procurement System support for several projects</li>
-          <li>Developed MS Access programs to import data from various supplier programs</li>
-          <li>Developed curriculum and administered training classes</li>
-          <li>Performed various database administration and maintenance</li>
-          <li>June 2003: assisted Transportation and Logistics Supervisor for Egypt LNG project</li>
-          <li>
-            Purchased major equipment, construction tools, and other jobsite materials for Equatorial Guinea LNG Train 1
-            Project
-          </li>
-        </ul>
+        <section>
+          <h4>
+            <span>Supply Chain Automation Lead</span>
+            <a href="https://www.bechtel.com" class="dim">Bechtel Infrastructure</a>
+          </h4>
+          <h5><span>Peoria, Arizona</span><span class="dim"><time datetime="2022-01">Jan '22</time> - present</span></h5>
+          <ul>
+            <li>Managed a Supply Chain Automation support team for Bechtel's Infrastructure global business unit</li>
+          </ul>
+        </section>
+        <section>
+          <h4>
+            <span>Materials Management Product Owner / Web Developer</span>
+            <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
+          </h4>
+          <h5><span>Glendale, Arizona</span><span class="dim"><time datetime="2016-01">Jan '16</time> - <time datetime="2021-12">Dec '21</time></span></h5>
+          <ul>
+            <li>
+              Designed and developed full stack (React front-end, Oracle PL/SQL back-end) of two mission-critical web
+              applications for expediting and materials management
+            </li>
+            <li>
+              Integrated modern web design techniques (React, Redux, Jest and Cypress testing, REST APIs, etc.) into a
+              legacy Oracle EBS platform
+            </li>
+            <li>
+              Used JIRA task management system and Agile software development methodologies to coordinate the activities of
+              UX designers, front-end and back-end developers
+            </li>
+            <li>Prepared product technical and functional documentation in MediaWiki-based content management system</li>
+            <li>Developed MediaWiki templates and Lua modules to help organize content for the enterprise</li>
+            <li>Automated the application deployment process with bash/PowerShell scripts and Azure Pipelines</li>
+          </ul>
+        </section>
+        <section>
+          <h4>
+            <span>Procurement Automation Product Owner</span>
+            <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
+          </h4>
+          <h5><span>Reston, Virginia</span><span class="dim"><time datetime="2014-06">Jun '14</time> - <time datetime="2015-12">Dec '15</time></span></h5>
+          <ul>
+            <li>Acted as Product Owner of Bechtel's homegrown procurement automation system</li>
+            <li>Helped transition the legacy web application suite from IE-only support to modern, standards-based code</li>
+            <li>Wrote user stories and functional requirements documents for maintenance and enhancement activities</li>
+            <li>
+              Prioritized backlog and developed product roadmap based on input from stakeholders and subject matter experts
+            </li>
+            <li>Managed the release/patch cycle</li>
+          </ul>
+        </section>
+        <section>
+          <h4>
+            <span>Procurement Automation Manager</span>
+            <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
+          </h4>
+          <h5><span>Houston, Texas</span><span class="dim"><time datetime="2012-04">Apr '12</time> - <time datetime="2014-05">May '14</time></span></h5>
+          <ul>
+            <li>Managed a team of 10 procurement automation specialists</li>
+            <li>Mentored and coached employees on career moves, conflict resolution, and problem-solving strategies</li>
+            <li>Supported procurement automation activities on several large capital projects</li>
+          </ul>
+        </section>
+        <section>
+          <h4>
+            <span>Procurement Automation Support Specialist</span>
+            <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
+          </h4>
+          <h5><span>Frederick, Maryland</span><span class="dim"><time datetime="2008-02">Feb '08</time> - <time datetime="2012-04">Apr '12</time></span></h5>
+          <ul>
+            <li>Supported and trained users</li>
+            <li>Developed utility applications to automate tasks</li>
+            <li>Designed new look and feel for large web application suite, including dozens of new icons</li>
+          </ul>
+        </section>
+        <section>
+          <h4>
+            <span>Materials Manager</span>
+            <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
+          </h4>
+          <h5><span>Houston, Texas</span><span class="dim"><time datetime="2007-05">May '07</time> - <time datetime="2008-02">Feb '08</time></span></h5>
+          <ul>
+            <li>Unit Procurement Coordinator for Motiva Port Arthur Refinery Crude Expansion Project</li>
+            <li>Served as liaison between engineering subcontractor and home office procurement</li>
+          </ul>
+        </section>
+        <section>
+          <h4>
+            <span>Procurement Automation Specialist</span><a href="https://www.bechtel.com" class="dim">Bechtel Limited</a>
+          </h4>
+          <h5><span>London, United Kingdom</span><span class="dim"><time datetime="2005-09">Sep '05</time> - <time datetime="2007-05">May '07</time></span></h5>
+          <ul>
+            <li>Lead Procurement System Coordinator for Reliance Jamnagar Export Refinery Project in Jamnagar, India</li>
+            <li>Assisted with setup and management of Oracle database, Citrix farm, and web-based applications</li>
+            <li>
+              Managed, maintained, and assisted with development of interface between Oracle database and client's SAP
+              system
+            </li>
+            <li>
+              Developed and deployed application extensions using Oracle triggers and procedures, MS Access front-ends, and
+              command line interfaces
+            </li>
+            <li>Supervised training and support of over 500 users on three different continents</li>
+          </ul>
+        </section>
+        <section>
+          <h4>
+            <span>Procurement Automation Specialist</span>
+            <a href="https://www.bechtel.com" class="dim">Bechtel Overseas, Inc.</a>
+          </h4>
+          <h5><span>Malabo, Equatorial Guinea</span><span class="dim"><time datetime="2004-08">Aug '04</time> - <time datetime="2005-08">Aug '05</time></span></h5>
+          <ul>
+            <li>Lead Procurement System Coordinator for EG LNG Train 1 Project</li>
+            <li>Trained and supported remote jobsite personnel</li>
+            <li>Contributed Oracle PL/SQL, ASP, and JavaScript code for bug fixes and enhancements</li>
+          </ul>
+        </section>
+        <section>
+          <h4>
+            <span>Procurement Automation Specialist</span>
+            <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
+          </h4>
+          <h5><span>Houston, Texas</span><span class="dim"><time datetime="2003-01">Jan '03</time> - <time datetime="2004-08">Aug '04</time></span></h5>
+          <ul>
+            <li>Acted as primary Procurement System support for several projects</li>
+            <li>Developed MS Access programs to import data from various supplier programs</li>
+            <li>Developed curriculum and administered training classes</li>
+            <li>Performed various database administration and maintenance</li>
+            <li>June 2003: assisted Transportation and Logistics Supervisor for Egypt LNG project</li>
+            <li>
+              Purchased major equipment, construction tools, and other jobsite materials for Equatorial Guinea LNG Train 1
+              Project
+            </li>
+          </ul>
+        </section>
       </section>
     </div>
     <script>
