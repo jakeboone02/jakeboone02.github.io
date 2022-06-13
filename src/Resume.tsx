@@ -1,9 +1,6 @@
-import raw from 'raw.macro';
 import ReactMarkdown from 'react-markdown';
+// @ts-expect-error
+import resume from '../RESUME.md?raw';
 import './Resume.scss';
 
-const resume = raw('../RESUME.md');
-
-const Resume = () => <ReactMarkdown source={resume} />;
-
-export default Resume;
+export const Resume = () => <ReactMarkdown>{resume}</ReactMarkdown>;
