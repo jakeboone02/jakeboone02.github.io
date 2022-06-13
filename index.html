@@ -11,6 +11,7 @@
           'Open Sans', 'Helvetica Neue', sans-serif;
       }
       body {
+        background-color: #ddd;
         color: #333;
         padding: 1rem;
       }
@@ -38,6 +39,7 @@
       h5 {
         display: flex;
         justify-content: space-between;
+        column-gap: 0.5rem;
       }
       h4 {
         margin-bottom: 0.5rem;
@@ -64,213 +66,264 @@
       .dim {
         opacity: 0.5;
       }
-      #resume {
-        padding: 2rem;
+      #cv {
+        background-color: white;
         border: 1px solid #ddd;
         border-radius: 1rem;
         box-shadow: #ccc 6px 6px 12px 8px;
+        padding: 2rem;
+        max-width: 1214px;
+        margin: 0 auto;
+      }
+      #expertise-body {
+        display: flex;
+        flex-direction: column;
+      }
+      #expertise h4 {
+        margin-top: 0;
+      }
+      @media (min-width: 992px) {
+        #expertise-body {
+          flex-direction: row;
+          justify-content: space-between;
+          column-gap: 0.5rem;
+        }
+        #tools {
+          order: 1;
+        }
+        #oss {
+          order: 2;
+        }
+        #teaching {
+          order: 3;
+        }
+      }
+      #certifications > h2 {
+        margin-top: 0;
+      }
+      #experience > ul {
+        border-right: 1px dotted gray;
+        padding-right: 0.5rem;
       }
     </style>
   </head>
   <body>
-    <div id="resume">
-      <h1>Jake Boone <span class="dim">'02</span></h1>
-      <ul class="inline-list">
-        <li><a href="https://github.com/jakeboone02">GitHub</a></li>
-        <li><a href="https://www.npmjs.com/~jakeboone02">npm</a></li>
-        <li><a href="https://twitter.com/jakeboone02">Twitter</a></li>
-        <li><a href="https://www.linkedin.com/in/jakeboone02">LinkedIn</a></li>
-      </ul>
-      <p>
-        I am a highly motivated, hard-working product owner and web developer with technical as well as managerial and
-        leadership experience. I have worked successfully with diverse, international teams in many different
-        environments. I enjoy designing and creating tools, teaching others, and bridging the gaps in knowledge and
-        understanding between functional and technical contributors.
-      </p>
-      <h2>Education</h2>
-      <ul>
-        <li>
-          <a href="https://www.tamu.edu/">Texas A&amp;M University</a>, College Station, Texas, 2002
-          <ul>
-            <li>
-              <abbr title="Bachelor of Business Administration">BBA</abbr>, Information and Operations Management
-              <span>(<abbr title="Management Information Systems">MIS</abbr> track)</span>
-            </li>
-            <li>
-              Four-year letterman, Track &amp; Field (<a href="https://en.wikipedia.org/wiki/Decathlon">decathlon</a>)
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h2>Expertise</h2>
-      <h4>Tools</h4>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3 / <a href="https://sass-lang.com/">SCSS</a></li>
-        <li>
-          JavaScript
-          <ul>
-            <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-            <li>
-              <a href="https://reactjs.org/">ReactJS</a> / <a href="https://redux-toolkit.js.org/">Redux (Toolkit)</a>
-            </li>
-            <li><a href="https://jestjs.io/">Jest</a> / <a href="https://www.cypress.io/">Cypress</a></li>
-            <li><a href="https://nodejs.org/">NodeJS</a></li>
-          </ul>
-        </li>
-        <li>SQL and Oracle PL/SQL</li>
-      </ul>
-      <h4>Teaching</h4>
-      <ul>
-        <li>
-          <a href="https://www.newline.co/courses/building-advanced-admin-reporting-in-react"
-            >Building Advanced Admin Reporting in React</a
-          >
-        </li>
-        <li><a href="https://stackoverflow.com/users/765987/jake-boone">Stack Overflow</a></li>
-      </ul>
-      <h4>Open-source contributions</h4>
-      <ul>
-        <li>
-          <a href="https://react-querybuilder.js.org">React Query Builder</a>
-          (<a href="https://www.npmjs.com/package/react-querybuilder">npm</a> /
-          <a href="https://www.npmjs.com/org/react-querybuilder">org</a>)
-        </li>
-        <li>
-          <a href="https://github.com/jakeboone02/numeric-quantity">Numeric Quantity</a>
-        </li>
-        <li>
-          <a href="https://github.com/jakeboone02/format-quantity">Format Quantity</a>
-        </li>
-        <li>
-          <a href="https://github.com/jakeboone02/parse-ingredient">Parse Ingredient</a>
-        </li>
-        <li>
-          <a href="https://marketplace.visualstudio.com/publishers/jakeboone02">VS Code extensions</a>
-        </li>
-      </ul>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Certified Scrum Product Owner</li>
-        <li>Six Sigma Qualtec Certified Yellow Belt</li>
-      </ul>
-      <h2>Experience</h2>
-      <h4>
-        <span>Supply Chain Automation Lead</span>
-        <a href="https://www.bechtel.com" class="dim">Bechtel Infrastructure</a>
-      </h4>
-      <h5><span>Peoria, Arizona</span><span class="dim">January 2022 - present</span></h5>
-      <ul>
-        <li>Managed a Supply Chain Automation support team for Bechtel's Infrastructure global business unit</li>
-      </ul>
-      <h4>
-        <span>Materials Management Product Owner / Web Developer</span>
-        <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
-      </h4>
-      <h5><span>Glendale, Arizona</span><span class="dim">January 2016 - December 2021</span></h5>
-      <ul>
-        <li>
-          Designed and developed full stack (React front-end, Oracle PL/SQL back-end) of two mission-critical web
-          applications for expediting and materials management
-        </li>
-        <li>
-          Integrated modern web design techniques (React, Redux, Jest and Cypress testing, REST APIs, etc.) into a
-          legacy Oracle EBS platform
-        </li>
-        <li>
-          Used JIRA task management system and Agile software development methodologies to coordinate the activities of
-          UX designers, front-end and back-end developers
-        </li>
-        <li>Prepared product technical and functional documentation in MediaWiki-based content management system</li>
-        <li>Developed MediaWiki templates and Lua modules to help organize content for the enterprise</li>
-        <li>Automated the application deployment process with bash/PowerShell scripts and Azure Pipelines</li>
-      </ul>
-      <h4>
-        <span>Procurement Automation Product Owner</span>
-        <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
-      </h4>
-      <h5><span>Reston, Virginia</span><span class="dim">June 2014 - December 2015</span></h5>
-      <ul>
-        <li>Acted as Product Owner of Bechtel's homegrown procurement automation system</li>
-        <li>Helped transition the legacy web application suite from IE-only support to modern, standards-based code</li>
-        <li>Wrote user stories and functional requirements documents for maintenance and enhancement activities</li>
-        <li>
-          Prioritized backlog and developed product roadmap based on input from stakeholders and subject matter experts
-        </li>
-        <li>Managed the release/patch cycle</li>
-      </ul>
-      <h4>
-        <span>Procurement Automation Manager</span>
-        <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
-      </h4>
-      <h5><span>Houston, Texas</span><span class="dim">April 2012 - May 2014</span></h5>
-      <ul>
-        <li>Managed a team of 10 procurement automation specialists</li>
-        <li>Mentored and coached employees on career moves, conflict resolution, and problem-solving strategies</li>
-        <li>Supported procurement automation activities on several large capital projects</li>
-      </ul>
-      <h4>
-        <span>Procurement Automation Support Specialist</span>
-        <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
-      </h4>
-      <h5><span>Frederick, Maryland</span><span class="dim">February 2008 - April 2012</span></h5>
-      <ul>
-        <li>Supported and trained users</li>
-        <li>Developed utility applications to automate tasks</li>
-        <li>Designed new look and feel for large web application suite, including dozens of new icons</li>
-      </ul>
-      <h4>
-        <span>Materials Manager</span>
-        <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
-      </h4>
-      <h5><span>Houston, Texas</span><span class="dim">May 2007 - February 2008</span></h5>
-      <ul>
-        <li>Unit Procurement Coordinator for Motiva Port Arthur Refinery Crude Expansion Project</li>
-        <li>Served as liaison between engineering subcontractor and home office procurement</li>
-      </ul>
-      <h4>
-        <span>Procurement Automation Specialist</span><a href="https://www.bechtel.com" class="dim">Bechtel Limited</a>
-      </h4>
-      <h5><span>London, United Kingdom</span><span class="dim">September 2005 - May 2007</span></h5>
-      <ul>
-        <li>Lead Procurement System Coordinator for Reliance Jamnagar Export Refinery Project in Jamnagar, India</li>
-        <li>Assisted with setup and management of Oracle database, Citrix farm, and web-based applications</li>
-        <li>
-          Managed, maintained, and assisted with development of interface between Oracle database and client's SAP
-          system
-        </li>
-        <li>
-          Developed and deployed application extensions using Oracle triggers and procedures, MS Access front-ends, and
-          command line interfaces
-        </li>
-        <li>Supervised training and support of over 500 users on three different continents</li>
-      </ul>
-      <h4>
-        <span>Procurement Automation Specialist</span>
-        <a href="https://www.bechtel.com" class="dim">Bechtel Overseas, Inc.</a>
-      </h4>
-      <h5><span>Malabo, Equatorial Guinea</span><span class="dim">August 2004 - August 2005</span></h5>
-      <ul>
-        <li>Lead Procurement System Coordinator for EG LNG Train 1 Project</li>
-        <li>Trained and supported remote jobsite personnel</li>
-        <li>Contributed Oracle PL/SQL, ASP, and JavaScript code for bug fixes and enhancements</li>
-      </ul>
-      <h4>
-        <span>Procurement Automation Specialist</span>
-        <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
-      </h4>
-      <h5><span>Houston, Texas</span><span class="dim">January 2003 - August 2004</span></h5>
-      <ul>
-        <li>Acted as primary Procurement System support for several projects</li>
-        <li>Developed MS Access programs to import data from various supplier programs</li>
-        <li>Developed curriculum and administered training classes</li>
-        <li>Performed various database administration and maintenance</li>
-        <li>June 2003: assisted Transportation and Logistics Supervisor for Egypt LNG project</li>
-        <li>
-          Purchased major equipment, construction tools, and other jobsite materials for Equatorial Guinea LNG Train 1
-          Project
-        </li>
-      </ul>
+    <div id="cv">
+      <header>
+        <h1>Jake Boone <span class="dim">'02</span></h1>
+        <ul class="inline-list">
+          <li><a href="https://github.com/jakeboone02">GitHub</a></li>
+          <li><a href="https://www.npmjs.com/~jakeboone02">npm</a></li>
+          <li><a href="https://twitter.com/jakeboone02">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/jakeboone02">LinkedIn</a></li>
+        </ul>
+        <p>
+          I am a highly motivated, hard-working product owner and web developer with technical as well as managerial and
+          leadership experience. I have worked successfully with diverse, international teams in many different
+          environments. I enjoy designing and creating tools, teaching others, and bridging the gaps in knowledge and
+          understanding between functional and technical contributors.
+        </p>
+      </header>
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <a href="https://www.tamu.edu/">Texas A&amp;M University</a>, College Station, Texas, 2002
+            <ul>
+              <li>
+                <abbr title="Bachelor of Business Administration">BBA</abbr>, Information and Operations Management
+                <span>(<abbr title="Management Information Systems">MIS</abbr> track)</span>
+              </li>
+              <li>
+                Four-year letterman, Track &amp; Field (<a href="https://en.wikipedia.org/wiki/Decathlon">decathlon</a>)
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section id="expertise">
+        <h2>Expertise</h2>
+        <div id="expertise-body">
+          <div id="tools">
+            <h4>Tools</h4>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3 / <a href="https://sass-lang.com/">SCSS</a></li>
+              <li>
+                JavaScript
+                <ul>
+                  <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+                  <li>
+                    <a href="https://reactjs.org/">ReactJS</a> / <a href="https://redux-toolkit.js.org/">Redux (Toolkit)</a>
+                  </li>
+                  <li><a href="https://jestjs.io/">Jest</a> / <a href="https://www.cypress.io/">Cypress</a></li>
+                  <li><a href="https://nodejs.org/">NodeJS</a></li>
+                </ul>
+              </li>
+              <li>SQL and Oracle PL/SQL</li>
+            </ul>
+          </div>
+          <div id="teaching">
+            <h4>Teaching</h4>
+            <ul>
+              <li>
+                <a href="https://www.newline.co/courses/building-advanced-admin-reporting-in-react"
+                  >Building Advanced Admin Reporting in React</a
+                >
+              </li>
+              <li><a href="https://stackoverflow.com/users/765987/jake-boone">Stack Overflow</a></li>
+            </ul>
+          </div>
+          <div id="oss">
+            <h4>Open-source contributions</h4>
+            <ul>
+              <li>
+                <a href="https://react-querybuilder.js.org">React Query Builder</a>
+                (<a href="https://www.npmjs.com/package/react-querybuilder">npm</a> /
+                <a href="https://www.npmjs.com/org/react-querybuilder">org</a>)
+              </li>
+              <li>
+                <a href="https://github.com/jakeboone02/numeric-quantity">Numeric Quantity</a>
+              </li>
+              <li>
+                <a href="https://github.com/jakeboone02/format-quantity">Format Quantity</a>
+              </li>
+              <li>
+                <a href="https://github.com/jakeboone02/parse-ingredient">Parse Ingredient</a>
+              </li>
+              <li>
+                <a href="https://marketplace.visualstudio.com/publishers/jakeboone02">VS Code extensions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+          <li>Certified Scrum Product Owner</li>
+          <li>Six Sigma Qualtec Certified Yellow Belt</li>
+        </ul>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <h4>
+          <span>Supply Chain Automation Lead</span>
+          <a href="https://www.bechtel.com" class="dim">Bechtel Infrastructure</a>
+        </h4>
+        <h5><span>Peoria, Arizona</span><span class="dim"><time datetime="2022-01">Jan '22</time> - present</span></h5>
+        <ul>
+          <li>Managed a Supply Chain Automation support team for Bechtel's Infrastructure global business unit</li>
+        </ul>
+        <h4>
+          <span>Materials Management Product Owner / Web Developer</span>
+          <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
+        </h4>
+        <h5><span>Glendale, Arizona</span><span class="dim"><time datetime="2016-01">Jan '16</time> - <time datetime="2021-12">Dec '21</time></span></h5>
+        <ul>
+          <li>
+            Designed and developed full stack (React front-end, Oracle PL/SQL back-end) of two mission-critical web
+            applications for expediting and materials management
+          </li>
+          <li>
+            Integrated modern web design techniques (React, Redux, Jest and Cypress testing, REST APIs, etc.) into a
+            legacy Oracle EBS platform
+          </li>
+          <li>
+            Used JIRA task management system and Agile software development methodologies to coordinate the activities of
+            UX designers, front-end and back-end developers
+          </li>
+          <li>Prepared product technical and functional documentation in MediaWiki-based content management system</li>
+          <li>Developed MediaWiki templates and Lua modules to help organize content for the enterprise</li>
+          <li>Automated the application deployment process with bash/PowerShell scripts and Azure Pipelines</li>
+        </ul>
+        <h4>
+          <span>Procurement Automation Product Owner</span>
+          <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
+        </h4>
+        <h5><span>Reston, Virginia</span><span class="dim"><time datetime="2014-06">Jun '14</time> - <time datetime="2015-12">Dec '15</time></span></h5>
+        <ul>
+          <li>Acted as Product Owner of Bechtel's homegrown procurement automation system</li>
+          <li>Helped transition the legacy web application suite from IE-only support to modern, standards-based code</li>
+          <li>Wrote user stories and functional requirements documents for maintenance and enhancement activities</li>
+          <li>
+            Prioritized backlog and developed product roadmap based on input from stakeholders and subject matter experts
+          </li>
+          <li>Managed the release/patch cycle</li>
+        </ul>
+        <h4>
+          <span>Procurement Automation Manager</span>
+          <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
+        </h4>
+        <h5><span>Houston, Texas</span><span class="dim"><time datetime="2012-04">Apr '12</time> - <time datetime="2014-05">May '14</time></span></h5>
+        <ul>
+          <li>Managed a team of 10 procurement automation specialists</li>
+          <li>Mentored and coached employees on career moves, conflict resolution, and problem-solving strategies</li>
+          <li>Supported procurement automation activities on several large capital projects</li>
+        </ul>
+        <h4>
+          <span>Procurement Automation Support Specialist</span>
+          <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
+        </h4>
+        <h5><span>Frederick, Maryland</span><span class="dim"><time datetime="2008-02">Feb '08</time> - <time datetime="2012-04">Apr '12</time></span></h5>
+        <ul>
+          <li>Supported and trained users</li>
+          <li>Developed utility applications to automate tasks</li>
+          <li>Designed new look and feel for large web application suite, including dozens of new icons</li>
+        </ul>
+        <h4>
+          <span>Materials Manager</span>
+          <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
+        </h4>
+        <h5><span>Houston, Texas</span><span class="dim"><time datetime="2007-05">May '07</time> - <time datetime="2008-02">Feb '08</time></span></h5>
+        <ul>
+          <li>Unit Procurement Coordinator for Motiva Port Arthur Refinery Crude Expansion Project</li>
+          <li>Served as liaison between engineering subcontractor and home office procurement</li>
+        </ul>
+        <h4>
+          <span>Procurement Automation Specialist</span><a href="https://www.bechtel.com" class="dim">Bechtel Limited</a>
+        </h4>
+        <h5><span>London, United Kingdom</span><span class="dim"><time datetime="2005-09">Sep '05</time> - <time datetime="2007-05">May '07</time></span></h5>
+        <ul>
+          <li>Lead Procurement System Coordinator for Reliance Jamnagar Export Refinery Project in Jamnagar, India</li>
+          <li>Assisted with setup and management of Oracle database, Citrix farm, and web-based applications</li>
+          <li>
+            Managed, maintained, and assisted with development of interface between Oracle database and client's SAP
+            system
+          </li>
+          <li>
+            Developed and deployed application extensions using Oracle triggers and procedures, MS Access front-ends, and
+            command line interfaces
+          </li>
+          <li>Supervised training and support of over 500 users on three different continents</li>
+        </ul>
+        <h4>
+          <span>Procurement Automation Specialist</span>
+          <a href="https://www.bechtel.com" class="dim">Bechtel Overseas, Inc.</a>
+        </h4>
+        <h5><span>Malabo, Equatorial Guinea</span><span class="dim"><time datetime="2004-08">Aug '04</time> - <time datetime="2005-08">Aug '05</time></span></h5>
+        <ul>
+          <li>Lead Procurement System Coordinator for EG LNG Train 1 Project</li>
+          <li>Trained and supported remote jobsite personnel</li>
+          <li>Contributed Oracle PL/SQL, ASP, and JavaScript code for bug fixes and enhancements</li>
+        </ul>
+        <h4>
+          <span>Procurement Automation Specialist</span>
+          <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
+        </h4>
+        <h5><span>Houston, Texas</span><span class="dim"><time datetime="2003-01">Jan '03</time> - <time datetime="2004-08">Aug '04</time></span></h5>
+        <ul>
+          <li>Acted as primary Procurement System support for several projects</li>
+          <li>Developed MS Access programs to import data from various supplier programs</li>
+          <li>Developed curriculum and administered training classes</li>
+          <li>Performed various database administration and maintenance</li>
+          <li>June 2003: assisted Transportation and Logistics Supervisor for Egypt LNG project</li>
+          <li>
+            Purchased major equipment, construction tools, and other jobsite materials for Equatorial Guinea LNG Train 1
+            Project
+          </li>
+        </ul>
+      </section>
     </div>
     <script>
       document.querySelectorAll('a').forEach(el => (el.target = '_blank'));
