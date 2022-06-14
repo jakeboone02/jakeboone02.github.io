@@ -86,7 +86,14 @@ ul.inline-list > li + li::before {
 #banner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: var(--md-gap);
+}
+@media (min-width: 768px) {
+  #banner {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 #teaching-and-certs {
