@@ -1,0 +1,161 @@
+:root {
+  --sm-gap: 0.5rem;
+  --md-gap: 1rem;
+  --lg-gap: 2rem;
+}
+
+html,
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+body {
+  background-color: #ddd;
+  color: #333;
+  padding: var(--md-gap);
+}
+
+a,
+a:visited {
+  color: #266998;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+h4,
+h5 {
+  display: flex;
+  justify-content: space-between;
+  column-gap: var(--sm-gap);
+}
+
+header,
+section {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--md-gap);
+}
+
+ul {
+  padding-inline-start: var(--lg-gap);
+  margin: 0;
+}
+ul > li > ul {
+  padding-inline-start: calc(var(--md-gap) + var(--sm-gap));
+}
+
+ul.inline-list {
+  display: inline-block;
+  padding: 0;
+}
+ul.inline-list > li {
+  display: inline;
+}
+ul.inline-list > li + li::before {
+  content: ' | ';
+}
+
+.dim {
+  opacity: 0.5;
+}
+
+#cv {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: var(--md-gap);
+  box-shadow: #ccc 6px 6px 12px 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1214px;
+  padding: var(--lg-gap);
+  row-gap: var(--md-gap);
+}
+
+#banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#teaching-and-certs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-gap);
+}
+#certs-inner {
+  display: none;
+}
+#certs-last {
+  display: initial;
+}
+
+#expertise-sections {
+  display: grid;
+  gap: var(--md-gap);
+}
+@media (min-width: 992px) {
+  #expertise-sections {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: var(--sm-gap);
+  }
+  #teaching-and-certs {
+    order: 99;
+  }
+  #certs-inner {
+    display: initial;
+  }
+  #certs-last {
+    display: none;
+  }
+}
+
+#experience > section {
+  row-gap: var(--sm-gap);
+}
+#experience ul {
+  border-right: 1px dotted gray;
+  padding-right: var(--sm-gap);
+}
+
+.flag {
+  background-repeat: no-repeat;
+  background-size: auto 14px;
+  display: inline-block;
+  height: 14px;
+  vertical-align: baseline;
+  width: var(--lg-gap);
+}
+.flag-gq {
+  background-image: url('./Flag_of_Equatorial_Guinea.svg');
+}
+.flag-uk {
+  background-image: url('./Flag_of_the_United_Kingdom.svg');
+}
+.flag-us {
+  background-image: url('./Flag_of_the_United_States.svg');
+}
+.flag-us-az {
+  background-image: url('./Flag_of_Arizona.svg');
+}
+.flag-us-md {
+  background-image: url('./Flag_of_Maryland.svg');
+}
+.flag-us-tx {
+  background-image: url('./Flag_of_Texas.svg');
+}
+.flag-us-va {
+  background-image: url('./Flag_of_Virginia.svg');
+}

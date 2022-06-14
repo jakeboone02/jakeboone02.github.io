@@ -1,136 +1,24 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Résumé / CV for Web Developer and Product Owner Jake Boone '02" />
     <title>Jake Boone '02 - Résumé / CV</title>
-    <style>
-      :root {
-        --sm-gap: 0.5rem;
-        --md-gap: 1rem;
-        --lg-gap: 2rem;
-      }
-      html,
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-          'Open Sans', 'Helvetica Neue', sans-serif;
-      }
-      body {
-        background-color: #ddd;
-        color: #333;
-        padding: var(--md-gap);
-      }
-      a,
-      a:visited {
-        color: #266998;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        margin: 0;
-      }
-      h4,
-      h5 {
-        display: flex;
-        justify-content: space-between;
-        column-gap: var(--sm-gap);
-      }
-      header,
-      section {
-        display: flex;
-        flex-direction: column;
-        row-gap: var(--md-gap);
-      }
-      ul {
-        padding-inline-start: var(--lg-gap);
-        margin: 0;
-      }
-      ul > li > ul {
-        padding-inline-start: calc(var(--md-gap) + var(--sm-gap));
-      }
-      .inline-list {
-        display: inline-block;
-        padding: 0;
-      }
-      .inline-list > li {
-        display: inline;
-      }
-      .inline-list > li + li::before {
-        content: ' | ';
-      }
-      .dim {
-        opacity: 0.5;
-      }
-      #cv {
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: var(--md-gap);
-        box-shadow: #ccc 6px 6px 12px 8px;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        max-width: 1214px;
-        padding: var(--lg-gap);
-        row-gap: var(--md-gap);
-      }
-      #teaching-and-certs {
-        display: flex;
-        flex-direction: column;
-        gap: var(--md-gap);
-      }
-      #certs-inner {
-        display: none;
-      }
-      #certs-last {
-        display: initial;
-      }
-      #expertise-sections {
-        display: grid;
-        gap: var(--md-gap);
-      }
-      @media (min-width: 992px) {
-        #expertise-sections {
-          grid-auto-flow: column;
-          grid-auto-columns: 1fr;
-          gap: var(--sm-gap);
-        }
-        #teaching-and-certs {
-          order: 99;
-        }
-        #certs-inner {
-          display: initial;
-        }
-        #certs-last {
-          display: none;
-        }
-      }
-      #experience > section {
-        row-gap: var(--sm-gap);
-      }
-      #experience ul {
-        border-right: 1px dotted gray;
-        padding-right: var(--sm-gap);
-      }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <div id="cv">
       <header>
-        <h1>Jake Boone <span class="dim">'02</span></h1>
-        <ul class="inline-list">
-          <li><a href="https://github.com/jakeboone02">GitHub</a></li>
-          <li><a href="https://www.npmjs.com/~jakeboone02">npm</a></li>
-          <li><a href="https://twitter.com/jakeboone02">Twitter</a></li>
-          <li><a href="https://www.linkedin.com/in/jakeboone02">LinkedIn</a></li>
-        </ul>
+        <div id="banner">
+          <h1>Jake Boone <span class="dim">'02</span></h1>
+          <ul class="inline-list">
+            <li><a href="https://github.com/jakeboone02">GitHub</a></li>
+            <li><a href="https://www.npmjs.com/~jakeboone02">npm</a></li>
+            <li><a href="https://twitter.com/jakeboone02">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/jakeboone02">LinkedIn</a></li>
+          </ul>
+        </div>
         <p>
           I am a highly motivated, hard-working product owner and web developer with technical as well as managerial and
           leadership experience. I have worked successfully with diverse, international teams in many different
@@ -237,7 +125,11 @@
             <a href="https://www.bechtel.com" class="dim">Bechtel Infrastructure</a>
           </h4>
           <h5>
-            <span>Peoria, Arizona</span><span class="dim"><time datetime="2022-01">Jan '22</time> - present</span>
+            <span>
+              <i class="flag flag-us-az"></i>
+              Peoria, Arizona
+            </span>
+            <span class="dim"><time datetime="2022-01">Jan '22</time> - present</span>
           </h5>
           <ul>
             <li>Managed a Supply Chain Automation support team for Bechtel's Infrastructure global business unit</li>
@@ -249,7 +141,10 @@
             <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
           </h4>
           <h5>
-            <span>Glendale, Arizona</span>
+            <span>
+              <i class="flag flag-us-az"></i>
+              Glendale, Arizona
+            </span>
             <span class="dim"><time datetime="2016-01">Jan '16</time> - <time datetime="2021-12">Dec '21</time></span>
           </h5>
           <ul>
@@ -278,14 +173,15 @@
             <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
           </h4>
           <h5>
-            <span>Reston, Virginia</span>
+            <span>
+              <i class="flag flag-us-va"></i>
+              Reston, Virginia
+            </span>
             <span class="dim"><time datetime="2014-06">Jun '14</time> - <time datetime="2015-12">Dec '15</time></span>
           </h5>
           <ul>
             <li>Acted as Product Owner of Bechtel's homegrown procurement automation system</li>
-            <li>
-              Helped transition the legacy web application suite from IE-only support to modern, standards-based code
-            </li>
+            <li>Helped transition the legacy web application suite from IE-only to support modern browsers</li>
             <li>Wrote user stories and functional requirements documents for maintenance and enhancement activities</li>
             <li>
               Prioritized backlog and developed product roadmap based on input from stakeholders and subject matter
@@ -300,7 +196,10 @@
             <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
           </h4>
           <h5>
-            <span>Houston, Texas</span>
+            <span>
+              <i class="flag flag-us-tx"></i>
+              Houston, Texas
+            </span>
             <span class="dim"><time datetime="2012-04">Apr '12</time> - <time datetime="2014-05">May '14</time></span>
           </h5>
           <ul>
@@ -315,7 +214,10 @@
             <a href="https://www.bechtel.com" class="dim">Bechtel Corporation</a>
           </h4>
           <h5>
-            <span>Frederick, Maryland</span>
+            <span>
+              <i class="flag flag-us-md"></i>
+              Frederick, Maryland
+            </span>
             <span class="dim"><time datetime="2008-02">Feb '08</time> - <time datetime="2012-04">Apr '12</time></span>
           </h5>
           <ul>
@@ -330,11 +232,18 @@
             <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
           </h4>
           <h5>
-            <span>Houston, Texas</span>
+            <span>
+              <i class="flag flag-us-tx"></i>
+              Houston, Texas
+            </span>
             <span class="dim"><time datetime="2007-05">May '07</time> - <time datetime="2008-02">Feb '08</time></span>
           </h5>
           <ul>
-            <li>Unit Procurement Coordinator for Motiva Port Arthur Refinery Crude Expansion Project</li>
+            <li>
+              Unit Procurement Coordinator for
+              <a href="https://en.wikipedia.org/wiki/Port_Arthur_Refinery">Motiva Port Arthur Refinery</a> Crude
+              Expansion Project
+            </li>
             <li>Served as liaison between engineering subcontractor and home office procurement</li>
           </ul>
         </section>
@@ -344,12 +253,17 @@
             <a href="https://www.bechtel.com" class="dim">Bechtel Limited</a>
           </h4>
           <h5>
-            <span>London, United Kingdom</span>
+            <span>
+              <i class="flag flag-uk"></i>
+              London, United Kingdom
+            </span>
             <span class="dim"><time datetime="2005-09">Sep '05</time> - <time datetime="2007-05">May '07</time></span>
           </h5>
           <ul>
             <li>
-              Lead Procurement System Coordinator for Reliance Jamnagar Export Refinery Project in Jamnagar, India
+              Lead Procurement System Coordinator for
+              <a href="https://en.wikipedia.org/wiki/Jamnagar_Refinery">Reliance Jamnagar Export Refinery Project</a> in
+              Jamnagar, India
             </li>
             <li>Assisted with setup and management of Oracle database, Citrix farm, and web-based applications</li>
             <li>
@@ -369,11 +283,17 @@
             <a href="https://www.bechtel.com" class="dim">Bechtel Overseas, Inc.</a>
           </h4>
           <h5>
-            <span>Malabo, Equatorial Guinea</span>
+            <span>
+              <i class="flag flag-gq"></i>
+              Malabo, Equatorial Guinea
+            </span>
             <span class="dim"><time datetime="2004-08">Aug '04</time> - <time datetime="2005-08">Aug '05</time></span>
           </h5>
           <ul>
-            <li>Lead Procurement System Coordinator for EG LNG Train 1 Project</li>
+            <li>
+              Lead Procurement System Coordinator for <a href="https://en.wikipedia.org/wiki/EG_LNG">EG LNG</a> Train 1
+              Project
+            </li>
             <li>Trained and supported remote jobsite personnel</li>
             <li>Contributed Oracle PL/SQL, ASP, and JavaScript code for bug fixes and enhancements</li>
           </ul>
@@ -384,7 +304,10 @@
             <a href="https://www.bechtel.com" class="dim">Bechtel Oil, Gas &amp; Chemicals, Inc.</a>
           </h4>
           <h5>
-            <span>Houston, Texas</span>
+            <span>
+              <i class="flag flag-us-tx"></i>
+              Houston, Texas
+            </span>
             <span class="dim"><time datetime="2003-01">Jan '03</time> - <time datetime="2004-08">Aug '04</time></span>
           </h5>
           <ul>
