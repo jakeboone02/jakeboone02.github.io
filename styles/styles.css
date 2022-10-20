@@ -85,15 +85,9 @@ ul.inline-list > li + li::before {
 
 #banner {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   gap: var(--md-gap);
-}
-@media (min-width: 768px) {
-  #banner {
-    align-items: center;
-    flex-direction: row;
-  }
+  align-items: center;
 }
 
 #teaching-and-certs {
@@ -165,24 +159,4 @@ ul.inline-list > li + li::before {
 }
 .flag-us-va {
   background-image: url('./Flag_of_Virginia.svg');
-}
-
-@media print {
-  body {
-    background-color: white;
-  }
-  abbr {
-    text-decoration: none;
-  }
-  .hide-for-print {
-    display: none !important;
-  }
-  #cv {
-    border-width: 0;
-    box-shadow: none;
-  }
-  #banner {
-    align-items: center;
-    flex-direction: column;
-  }
 }

@@ -1,0 +1,19 @@
+body {
+  background-color: white;
+}
+abbr {
+  text-decoration: none;
+}
+.hide-for-print {
+  display: none !important;
+}
+#cv {
+  border-width: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+#banner {
+  align-items: center;
+  flex-direction: column;
+}
