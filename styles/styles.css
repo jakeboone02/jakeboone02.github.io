@@ -166,3 +166,23 @@ ul.inline-list > li + li::before {
 .flag-us-va {
   background-image: url('./Flag_of_Virginia.svg');
 }
+
+@media print {
+  body {
+    background-color: white;
+  }
+  abbr {
+    text-decoration: none;
+  }
+  .hide-for-print {
+    display: none !important;
+  }
+  #cv {
+    border-width: 0;
+    box-shadow: none;
+  }
+  #banner {
+    align-items: center;
+    flex-direction: column;
+  }
+}
