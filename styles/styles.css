@@ -170,3 +170,56 @@ ul.inline-list > li + li::before {
 .flag-us-va {
   background-image: url('./Flag_of_Virginia.svg');
 }
+
+@media print {
+  :root {
+    --sm-gap: 0.25rem;
+    --md-gap: 0.75rem;
+    --lg-gap: 1.5rem;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-size: 10pt !important;
+  }
+  abbr {
+    text-decoration: none;
+  }
+  .flag,
+  .hide-for-print {
+    display: none !important;
+  }
+  #cv {
+    border-width: 0;
+    box-shadow: none !important;
+    margin: 0;
+    padding: 0;
+  }
+  #banner {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #expertise-sections {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sm-gap);
+  }
+  #tools {
+    order: 1;
+  }
+  #oss {
+    order: 2;
+  }
+  #teaching-and-certs {
+    order: 3;
+  }
+  #certs-inner {
+    display: none;
+  }
+  #certs-last {
+    display: initial;
+    order: 4;
+  }
+}
